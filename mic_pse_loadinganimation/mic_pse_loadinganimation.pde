@@ -135,6 +135,8 @@ void setup()
 }
 
 void draw() {
+  JSONArray json = loadJSONArray("http://127.0.0.1:5000/poses");
+  guess = json.getJSONObject(0).getString("name");
   //image(images[3], 0, 0, width, height);
   if (!finished) {
     background(255);
